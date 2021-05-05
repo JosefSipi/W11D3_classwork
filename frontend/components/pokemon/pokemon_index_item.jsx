@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Route } from 'react-router-dom';
 
 
 class PokemonIndexItem extends React.Component {
@@ -10,8 +11,14 @@ class PokemonIndexItem extends React.Component {
 
 
     render () {
+
         return (
-            <li>Image:{this.props.pokemon.imageUrl} Name:{this.props.pokemon.name}</li>
+            <Link to={`/pokemon/${this.props.pokeid}`}>
+                <li className="pokemon-index-item" >
+                    <img src={this.props.imageUrl} />
+                    <span>{this.props.name}</span>
+                    </li>
+            </Link>
         )
     }
 
