@@ -11,7 +11,7 @@ class PokemonIndexItem extends React.Component {
 
     render () {
         return (
-            <li>{this.props.pok}</li>
+            <li>Image:{this.props.pokemon.imageUrl} Name:{this.props.pokemon.name}</li>
         )
     }
 
